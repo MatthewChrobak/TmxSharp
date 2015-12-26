@@ -1,14 +1,13 @@
 # TmxSharp
-A C# library that acts merely as a data structure for .tmx Tiled map files.
-It does not provide out-of-the-box serialization. It must be implemented on your own accord.
+A .NET C# library providing the tools necessary to serialize, deserialize, and explore the components of a Tiled .TMX map file.
 
 
 
-# Sample Deserialization Code
+# I/O Examples
+            // Deserialization
+            var map = TmxMap.Load(FilePath);
 
-            var xml = new XmlSerializer(typeof(map));
-            var stream = new FileStream(filepath, FileMode.Open);
-            var instance = (map)xml.Deserialize(stream);
-            stream.Close();
+            // Serialization
+            map.Save(FilePath);
             
 *remember to declare usage of the TmxSharp namespace*
