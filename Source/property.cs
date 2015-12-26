@@ -2,12 +2,13 @@
 
 namespace TmxSharp
 {
-    public class property
+    [XmlRoot(ElementName = "property")]
+    public class Property
     {
-        [XmlAttribute]
-        public string name;
+        [XmlAttribute("name")]
+        public string Name;
 
-        [XmlAttribute]
-        public string value;
+        [XmlAttribute("value")]
+        public string Value;
     }
 }
