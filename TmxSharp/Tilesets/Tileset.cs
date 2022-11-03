@@ -1,5 +1,4 @@
 ﻿using System.Xml.Serialization;
-using TmxSharp.Images;
 
 namespace TmxSharp.Tilesets
 {
@@ -9,21 +8,10 @@ namespace TmxSharp.Tilesets
         [XmlAttribute("firstgid")]
         public int FirstGID;
 
-        [XmlAttribute("name")]
-        public string Name;
+        [XmlAttribute("source")]
+        public string Source;
 
-        [XmlAttribute("tilewidth")]
-        public int TileWidth;
-
-        [XmlAttribute("tileheight")]
-        public int TileHeight;
-
-        [XmlAttribute("tilecount")]
-        public int TileCount;
-
-        [XmlElement("image")]
-        public Image Image;
-
+        /* Are these still used?
         [XmlElement("tile", Type = typeof(TilesetTile))]
         public TilesetTile[] Tile;
 
@@ -34,5 +22,6 @@ namespace TmxSharp.Tilesets
         [XmlArray("terraintypes")]
         [XmlArrayItem(ElementName = "terrain")]
         public Terrain[] TerrainTypes;
+        */
     }
 }

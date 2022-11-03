@@ -1,5 +1,4 @@
-﻿using System.IO;
-using System.Xml.Serialization;
+﻿using System.Xml.Serialization;
 using TmxSharp.Collisions;
 using TmxSharp.Images;
 using TmxSharp.Layers;
@@ -33,6 +32,12 @@ namespace TmxSharp
 
         [XmlAttribute("tileheight")]
         public int TileHeight;
+
+        [XmlAttribute("infinite")]
+        public int Infinite;
+
+        [XmlAttribute("nextlayerid")]
+        public int NextLayerId;
 
         [XmlAttribute("nextobjectid")]
         public int NextObjectID;

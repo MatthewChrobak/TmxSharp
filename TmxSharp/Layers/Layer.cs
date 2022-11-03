@@ -26,9 +26,8 @@ namespace TmxSharp.Layers
         [XmlAttribute("offsety")]
         public int OffsetY;
 
-        [XmlArray("data")]
-        [XmlArrayItem(ElementName = "tile", Type = typeof(LayerTile))]
-        public LayerTile[] Data;
+        [XmlElement("data")]
+        public Data Data;
 
         [XmlArray("properties")]
         [XmlArrayItem(ElementName = "property")]
